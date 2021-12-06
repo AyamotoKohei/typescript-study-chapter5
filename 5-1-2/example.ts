@@ -16,20 +16,20 @@ type K4 = keyof false;
 
 let a1 = { p1: 0 };
 let a2 = { p1: "test" };
-a1 = a2;
-a2 = a1;
+a1 = a2; // Error
+a2 = a1; // Error
 
 let b1 = { p1: "test" };
 let b2 = { p2: "test" };
-b1 = b2;
-b2 = b1;
+b1 = b2; // Error
+b2 = b1; // Error
 
 let c1 = { p1: "test" };
 let c2 = { p1: "test", p2: 0 };
 c1 = c2;
-c2 = c1;
+c2 = c1; // Error
 
 let d1 = {};
 let d2 = { p1: "test" };
 d1 = d2;
-d2 = d1;
+d2 = d1; // Error
